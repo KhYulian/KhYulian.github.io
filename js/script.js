@@ -2,6 +2,7 @@
 
 const spoiler_btn = document.querySelectorAll('.spoiler__btn');
 const progress_bar = document.querySelector('.progress-bar');
+const about_me_articles = document.querySelectorAll('.about-me__article');
 
 function showSpoilerContent(e) {
 	const btn = e.target.closest('.spoiler__btn');
@@ -22,3 +23,10 @@ window.addEventListener('scroll', () => {
 
 	progress_bar.style.width = progress + '%';
 });
+
+(function () {
+	about_me_articles.forEach(
+		(el, idx) =>
+			(el.style.animation = `slideInArticles 600ms ${1200 + idx * 400}ms forwards`)
+	);
+})();

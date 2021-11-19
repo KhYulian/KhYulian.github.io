@@ -32,6 +32,7 @@ img {
 	background-color: var(--platinum);
 	transform: translateY(-100%);
 	animation: slideInY 600ms 600ms forwards;
+	overflow: hidden;
 }
 @media screen and (max-width: 768px) {
 	.aside {
@@ -151,7 +152,9 @@ img {
 .about-me article:not(:last-child) {
 	margin: 0 0 60px 0;
 }
-
+.about-me__article {
+	transform: translateX(150%);
+}
 @media screen and (max-width: 768px) {
 	.about-me {
 		padding: 30px 20px;
@@ -181,6 +184,14 @@ img {
 @keyframes slideInX {
 	0% {
 		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slideInArticles {
+	0% {
+		transform: translateX(100%);
 	}
 	100% {
 		transform: translateX(0);
