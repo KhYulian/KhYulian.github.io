@@ -10,7 +10,7 @@ function showSpoilerContent(e) {
 	const spoiler_header = btn.parentElement;
 
 	btn.classList.toggle('.spoiler__btn_active');
-	spoiler_header.nextElementSibling.classList.toggle('spoiler__content_active');
+	spoiler_header.nextElementSibling.classList.toggle('spoiler__content_active');	
 }
 
 spoiler_btn.forEach(el => el.addEventListener('click', showSpoilerContent));
