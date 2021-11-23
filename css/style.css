@@ -65,6 +65,7 @@ img {
 }
 .spoiler__header {
 	font-size: 24px;
+	font-weight: 400;
 	margin: 0 0 10px 0;
 	border-bottom: 2px solid var(--platinum);
 	display: flex;
@@ -137,7 +138,7 @@ img {
 .about-me {
 	padding: 40px 30px;
 }
-.about-me__name {	
+.about-me__name {
 	font-size: 42px;
 	font-weight: 600;
 	text-decoration: underline;
@@ -152,7 +153,7 @@ img {
 	font-size: 24px;
 }
 .about-me__article:not(:last-child) {
-	margin: 0 0 60px 0;
+	margin: 0 0 40px 0;
 }
 .about-me__article {
 	transform: translateX(150%);
