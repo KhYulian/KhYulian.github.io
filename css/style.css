@@ -137,7 +137,7 @@ img {
 .about-me {
 	padding: 40px 30px;
 }
-.about-me__name {
+.about-me__name {	
 	font-size: 42px;
 	font-weight: 600;
 	text-decoration: underline;
@@ -149,10 +149,9 @@ img {
 }
 .about-me__header {
 	margin: 0 0 10px 0;
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 24px;
 }
-.about-me article:not(:last-child) {
+.about-me__article:not(:last-child) {
 	margin: 0 0 60px 0;
 }
 .about-me__article {
