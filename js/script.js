@@ -6,13 +6,6 @@ const about_me_articles = document.querySelectorAll('.about-me__article');
 const spoilers = document.querySelectorAll('.spoiler');
 const avatar = document.querySelector('.avatar');
 
-function loadImg() {
-	this.classList.remove('lazy');
-	this.src = './img/avatar.jpg';
-	this.removeEventListener('load', loadImg);
-}
-avatar.addEventListener('load', loadImg);
-
 function showSpoilerContent(e) {
 	const btn = e.target.closest('.spoiler__btn');
 	const spoiler_header = btn.parentElement;
@@ -44,3 +37,11 @@ function startAnimation(targetElement, animationName, animationDelay = 0) {
 
 startAnimation(spoilers, 'slideInX', 600);
 startAnimation(about_me_articles, 'slideInArticles', 600);
+
+avatar.src = './img/avatar.jpg';
+
+function loadImg() {
+	this.classList.remove('lazy');
+	this.removeEventListener('load', loadImg);
+}
+avatar.addEventListener('load', loadImg);
