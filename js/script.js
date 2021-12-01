@@ -38,7 +38,9 @@ function startAnimation(targetElement, animationName, animationDelay = 0) {
 startAnimation(spoilers, 'slideInX', 600);
 startAnimation(about_me_articles, 'slideInArticles', 600);
 
-avatar.addEventListener('load', () => {
-	avatar.classList.remove('lazy');
-	avatar.src = './img/avatar.jpg';
-});
+function loadImg() {
+	this.classList.remove('lazy');
+	this.src = './img/avatar.jpg';
+	this.removeEventListener('load', loadImg);
+}
+avatar.addEventListener('load', loadImg);
